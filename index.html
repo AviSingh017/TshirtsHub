@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avishek Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/3af5a307c6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Avishek Singh</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="index.html">Resume</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+            <a href="#" class="actionBtn">Projects</a>
+            <div class="toggleBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdownMenu open">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="index.html">Resume</a></li>
+            <li><a href="index.html">Contact</a></li>
+            <a href="#" class="actionBtn">Projects</a>
+        </div>
+    </header>
+
+
+    <!-------------------------------------- Main Section Bod ---------------------------------------->
+    <div class="videoBox">
+
+        <video autoplay loop muted plays-inline class="Video">
+            <source src="/shirts.mp4" type="video/mp4">
+        </video>
+
+        <div class="Vcontent">
+            <h1>We’re Hitting the Refresh Button</h1>
+            <h2>4 SHIRTS OR POLOS FOR $239</h2>
+            <h2>SAVE UP TO $235</h2>
+            <a href="#">SHOP NEW SEASON</a>
+            <a href="">SHOP SHIRTS</a>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        const toggle_Btn = document.querySelector(".toggleBtn")
+        const toggleBtnIcon = document.querySelector(".toggleBtn i")
+        const dropdown_Menu = document.querySelector(".dropdownMenu")
+
+        toggle_Btn.onclick = function () {
+            dropdown_Menu.classList.toggle("open")
+            const isOpen = dropdown_Menu.classList.contains("open")
+
+            toggleBtnIcon.classList = isOpen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+        }
+    </script>
+</body>
+
+</html>
