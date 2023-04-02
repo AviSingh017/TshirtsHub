@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReFurbay Furniture</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
+
+    body {
+      background-color: #fff;
+    }
+
+    #btn {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #cloth-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 500px;
+      gap: 25px;
+      width: 95%;
+      margin: auto;
+      margin-top: 20px;
+
+    }
+
+    #cloth-container img {
+      width: 100%;
+      height: 340px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+    }
+
+    #cloth-container>div {
+      text-align: center;
+      /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+      /* box-shadow: rgba(0.00,0.00,0.00,6.67) 0px 7px 29px 0px; */
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      line-height: 25px;
+      border-radius: 10px;
+      background-color: #fff;
+
+
+    }
+
+    #cloth-container>div>div>button {
+      display: block;
+      margin: auto;
+      width: 120px;
+      height: 30px;
+      border-radius: 3px;
+      background-color: #333;
+      color: white;
+      font-size: 15px;
+      border: none;
+      margin-top: 15px;
+      font-family: montserrat;
+      transition: transform 0.3s;
+    }
+
+    #cloth-container>div>div>button:hover {
+      transform: scale(1.1);
+    }
+
+    #cloth-container>div>h2 {
+      margin-left: 20px;
+      font-size: 18px;
+      font-family: montserrat;
+
+    }
+
+    #cloth-container>div>p {
+      margin-left: 20px;
+      font-family: poppins;
+
+    }
+
+    #filter {
+
+      border: none;
+      font-size: 18px;
+      width: 190px;
+      border-radius: 20px;
+      height: 30px;
+
+      color: rgb(42, 43, 43);
+    }
+
+    .nav1 {
+      width: 94%;
+      padding: 0px 7px;
+      margin-top: 30px;
+      margin-left: 3.3%;
+      font-size: 15px;
+      color: rgb(42, 43, 43);
+      line-height: 38px;
+      font-family: poppins;
+    }
+
+
+
+    span:hover {
+      color: #0083ca;
+      border-bottom: 2px solid #0083ca
+    }
+
+    #function {
+      font-size: 20px;
+      /* color: ; */
+      font-family: poppins;
+      color: rgb(42, 43, 43);
+      margin-left: 3.3%;
+    }
+
+    .navbar {
+      margin-top: -65px;
+    }
+
+    .nav1 {
+      background-color: #FFEBEE;
+      margin-top: 70px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo" id="logo1"><a href="index.html">Zapparel</a></div>
+      <ul class="links">
+        <li><a href="furniture.html">SHIRTS</a></li>
+        <li><a href="index.html">PANTS</a></li>
+        <li><a href="index.html">SUITS & JACKETS</a></li>
+        <li><a href="index.html">SHOES</a></li>
+        <li><a href="index.html">SWEATERS</a></li>
+      </ul>
+      <a href="login.html" class="actionBtn" id="LName">LOGIN / REGISTER</a>
+      <a href="shopping-cart.html" class="actionBtn">CART</a>
+      <div class="toggleBtn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdownMenu open">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">About</a></li>
+      <li><a href="index.html">Resume</a></li>
+      <li><a href="index.html">Contact</a></li>
+      <a href="login.html" class="actionBtn">LOGIN / REGISTER</a>
+    </div>
+  </header>
+
+  <div class="nav1">
+    <p><span>Home</span>/<span>Zapparel</span>/<span>Suits & Jackets</span>/<span>Home - Office Dresses</span></p>
+    <h1 style="font-family: montserrat; padding-bottom: 10px;">Finest / Suits, Coats & Jackets Only on Zapparel</h1>
+    <p>Order Now and get Free $10 products</p>
+  </div>
+
+  <div id="function">
+
+    <label>Sort by :- <span id="l2h"> Price :-Low to High</span> / <span id="h2l">Price :- High to Low</span></label>
+  </div>
+
+  <div id="cloth-container"></div>
+
+  <div id="pagination-wrapper"></div>
+  <br>
+  <br>
+
+  <footer>
+    <div class="content">
+      <div class="left box">
+        <div class="upper">
+          <div class="topic">About us</div>
+          <p>Read all about it! Explore style hints and tips from Tyrwhitt, discover more about our collections and products, and meet unique leaders through Nick Wheeler's interviews in A Tailored Life.</p>
+        </div>
+        <div class="lower">
+          <div class="topic">Contact us</div>
+          <div class="phone">
+            <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
+          </div>
+          <div class="email">
+            <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="middle box">
+        <div class="topic">Our Products</div>
+        <div><a href="#">Tailored Fitted Shirts</a></div>
+        <div><a href="#">Suits & Cotton Blazzers</a></div>
+        <div><a href="#">Personalised Shirts Design</a></div>
+        <div><a href="#">Theme Dresses, Design</a></div>
+        <div><a href="#">Mobile Cover Design</a></div>
+        <div><a href="#">Wired with Different Styles</a></div>
+      </div>
+      <div class="right box">
+        <div class="topic">Subscribe us</div>
+        <form action="#">
+          <input type="text" placeholder="Enter email address">
+          <input type="submit" name="" value="Send">
+          <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="bottom">
+      <p style="padding: 0px 20px;">Copyright © 2023 <a href="#">Avishek Singh</a> All rights reserved</p>
+    </div>
+  </footer>
+
+</body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  let cardata = JSON.parse(localStorage.getItem("cart")) || []
+  let container = document.getElementById("cloth-container")
+  let filterSelect = document.getElementById("filter");
+  let pagination = document.getElementById("pagination-wrapper")
+  let l2h = document.getElementById("l2h");
+  let cloth = []
+  l2h.addEventListener("click", () => {
+    let sort = cloth.sort((a, b) => (a.price) - (b.price));
+    shopdata(sort)
+  })
+  let h2l = document.getElementById("h2l")
+  h2l.addEventListener("click", () => {
+    let sort = cloth.sort((a, b) => (b.price) - (a.price));
+    shopdata(sort)
+  })
+
+
+
+
+
+
+  fetch("https://zoro-to7p.onrender.com/avis")
+    .then((res) => {
+      return res.json()
+    })
+    .then((data) => {
+      shopdata(data)
+      cloth = data
+    })
+
+
+  function shopdata(data) {
+    container.innerHTML = null
+    data.forEach((element) => {
+      let card = document.createElement("div");
+      let img = document.createElement("img");
+      img.setAttribute("src", element.image);
+
+
+      // setInterval(() => {
+      //   img.onmouseover = function () {
+      //     img.setAttribute("src", element.image2)
+      //   }
+      //   img.onmouseout = function () {
+      //     img.setAttribute("src", element.image)
+      //   }
+
+      // }, 2000)
+      // clearInterval(id)
+
+      let brand = document.createElement("h2");
+      brand.innerText = element.title.substring(0, 21);
+      let price = document.createElement("p")
+      price.innerText = "$" + " " + element.price;
+      let button = document.createElement("button");
+      button.innerText = "Add To Cart"
+      let btn = document.createElement("button");
+      btn.innerText = "View";
+      let dbt = document.createElement("div");
+      dbt.append(button, btn)
+      dbt.setAttribute("id", "btn")
+
+      button.addEventListener("click", () => {
+
+        // if(cardata==null)cardata=[];
+        let ready = false
+        for (let i = 0; i < cardata.length; i++) {
+          if (cardata[i].image === element.image) {
+            ready = true;
+            break
+
+          }
+        }
+        if (ready == true) {
+          // alert("Product Added to the cart")
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Product Already in Cart!'
+          })
+        } else {
+          cardata.push({ ...element, quantity: 1 });
+          console.log(cardata)
+          localStorage.setItem("cart", JSON.stringify(cardata));
+          Swal.fire({
+            position: "centre",
+            icon: "success",
+            title: "Product Added to Cart.",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+
+        }
+
+
+
+      })
+      card.append(img, brand, price, dbt);
+      container.append(card)
+
+
+    })
+  }
+
+</script>
+
+<!-- Do not touch this code !!!!!!!!!! -->
+<script>
+  let Display_name = document.getElementById("LName");
+  let userDname = JSON.parse(localStorage.getItem("zapp-name"));
+  Display_name.textContent = userDname;
+  let logo = document.getElementById("logo1");
+  logo.addEventListener("click", (e) => {
+    localStorage.setItem("zapp-name", JSON.stringify("LOGIN / REGISTER"));
+    Display_name.textContent = "LOGIN / REGISTER"
+  })
+</script>
+<!-- Do not touch this code !!!!!!!!!! -->
+
+<script>
+  let searchBar = document.getElementById("searchBar");
+  let searchBtn = document.getElementById("searchBtn");
+
+  searchBtn.addEventListener("click", () => {
+    if (searchBar.value == "mobile") {
+      window.location.href = "mobile.html";
+    }
+    else if (searchBar.value == "furniture") {
+      window.location.href = "furniture.html";
+    }
+    else if (searchBar.value == "Furniture") {
+      window.location.href = "furniture.html";
+    }
+    else if (searchBar.value == "Furnitures") {
+      window.location.href = "furniture.html";
+    }
+    else if (searchBar.value == "furnitures") {
+      window.location.href = "furniture.html";
+    }
+    else if (searchBar.value == "sofa set") {
+      window.location.href = "furniture.html";
+    }
+    else if (searchBar.value == "Sofa set") {
+      window.location.href = "furniture.html";
+    }
+    else if (searchBar.value == "sofa sets") {
+      window.location.href = "furniture.html";
+    }
+    else if (searchBar.value == "Sofa sets") {
+      window.location.href = "furniture.html";
+    }
+    else if (searchBar.value == "Mobiles") {
+      window.location.href = "mobile.html";
+    }
+    else if (searchBar.value == "mobiles") {
+      window.location.href = "mobile.html";
+    }
+    else {
+      window.location.href = "none.html";
+    }
+  })
+</script>
+
+</html>

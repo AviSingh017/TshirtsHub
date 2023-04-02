@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css">
+    <title>Cart</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
+      
+
+      #cart-container{
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;
+        grid-auto-rows: 350px;
+        margin: auto;
+        text-align: center;
+        gap: 20px;
+        overflow: auto;
+        height: 100%;
+      
+      }
+      img{
+        width: 27%;
+        height: 100%;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+      #mode{
+        display: flex;
+        justify-content: space-between;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+         /* padding-left:10px ; */
+   /* border-radius: 15px; */
+        /* background-color: #fff; */
+        background-color: white;
+        font-family: poppins;
+        border-radius: 15px;
+      }
+      #data{
+        /* border:1px solid red; */
+        width: 72%;
+        line-height: 40px;
+        text-align: left;
+        background-color: rgb(255, 235, 238);
+        padding-top: 20px;
+        padding-left: 10px;
+ 
+      }
+  
+  
+      #cart-container>div>div button{
+        background-color: #333;
+        color: #fff;
+      
+        width: 25px;
+        height: 100%;
+        /* text-align: center; */
+        /* padding:10px; */
+        font-size: 24px;
+        border-radius: 5px;
+        transition: transform 0.3s;
+      }
+      #cart-container>div>div button:hover{
+        transform: scale(1.1);
+
+      }
+    
+      #top{
+
+      width: 44%;
+        font-family: poppins;
+        font-size: 12px;
+        height: 350px;
+        background-color: white;
+        border-radius: 20px;
+      }
+      
+    
+      #buy,#coupne{
+        background-color: #333;
+        width: 200px;
+        height: 45px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border: none;
+        font-size: 14px;
+       margin-right: 1.5%;
+        /* border: 1px solid red; */
+        transition: transform 0.3s;
+        font-family: montserrat;
+        margin: auto;
+        margin-top: 20px;
+
+      }
+      #buy:hover{
+        transform: scale(1.1);
+      }
+      #coupne:hover{
+        transform: scale(1.1);
+      }
+    #h1{
+   font-family: montserrat;
+   font-size: 29px;
+   text-align: center;
+   margin-top: 30px;
+    }
+    #cart-container>div>div #remove{
+      background-color: #333;
+      color: #fff;
+      font-size: 16px;
+      font-family: montserrat;
+      border-radius: 5px;
+      width: 100px;
+      transition: transform 0.3s;
+      height: 32px;
+      /* margin: ;
+       */
+      /* margin-top: 10px; */
+      margin-top: 20px;
+  margin-left: 30px;
+    }
+    #remove:hover{
+      transform: scale(1.1);
+    }
+    #main{
+      display: flex;
+    
+      width: 93%;
+       margin: auto;
+      /* border: 2px solid black; */
+      margin-top: 2%;
+      height:90vh ;
+     
+    }
+ 
+  #total1{
+    margin-top: 10%;
+    font-size: 11px;
+    padding-left: 50px;
+  }
+  #data p{
+    font-family: poppins;
+    line-height: 30px;
+  }
+  #button{
+    /* border: 1px solid green; */
+    width:100px;
+    margin-top: 20px;
+  margin-left: 30px;
+    display:flex;
+    justify-content: space-evenly;
+  }
+  #button p{
+    font-family: montserrat;
+    font-size: 22px;
+  }
+  #cart-total{
+    color: green;
+  }
+
+  .navbar {
+      margin-top: -25px;
+    }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="navbar">
+          <div class="logo" id="logo1"><a href="index.html">Zapparel</a></div>
+          <ul class="links">
+              <li><a href="furniture.html">SHIRTS</a></li>
+              <li><a href="index.html">PANTS</a></li>
+              <li><a href="index.html">SUITS & JACKETS</a></li>
+              <li><a href="index.html">SHOES</a></li>
+              <li><a href="index.html">SWEATERS</a></li>
+          </ul>
+          <a href="login.html" class="actionBtn" id="LName">LOGIN / REGISTER</a>
+          <a href="shopping-cart.html" class="actionBtn">CART</a>
+          <div class="toggleBtn">
+              <i class="fa-solid fa-bars"></i>
+          </div>
+      </div>
+
+      <div class="dropdownMenu open">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="index.html">Resume</a></li>
+          <li><a href="index.html">Contact</a></li>
+          <a href="login.html" class="actionBtn">LOGIN / REGISTER</a>
+      </div>
+  </header>
+    
+   <div id="main">
+   
+   
+   <div id="cart-container" style="margin-top: 50px;">
+     <!-- Here Append All the cart Products  -->
+   </div>
+    <div id="top" style="margin-top: 50px;">
+      <h1 id="h1">Shopping Bag</h1>
+      <marquee behavior="" direction="right">Zapparel</marquee>
+      <div id="total1">
+        <h1>Total products :- <span id="item">0</span></h1>
+        <h1 id="total"> Total cart Price:- ₹ <span id="cart-total">0</span></h1>
+        <button id="coupne">Apply Coupon</button>
+        <a href="check.html" style="text-decoration: none;"><button id="buy">Place Order</button></a>
+
+      </div>
+    
+   </div>
+
+   </div>
+    
+    <br>
+    <br>
+
+    <footer>
+      <div class="content">
+        <div class="left box">
+          <div class="upper">
+            <div class="topic">About us</div>
+            <p>Read all about it! Explore style hints and tips from Tyrwhitt, discover more about our collections and products, and meet unique leaders through Nick Wheeler's interviews in A Tailored Life.</p>
+          </div>
+          <div class="lower">
+            <div class="topic">Contact us</div>
+            <div class="phone">
+              <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
+            </div>
+            <div class="email">
+              <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="middle box">
+          <div class="topic">Our Products</div>
+          <div><a href="#">Tailored Fitted Shirts</a></div>
+          <div><a href="#">Suits & Cotton Blazzers</a></div>
+          <div><a href="#">Personalised Shirts Design</a></div>
+          <div><a href="#">Theme Dresses, Design</a></div>
+          <div><a href="#">Mobile Cover Design</a></div>
+          <div><a href="#">Wired with Different Styles</a></div>
+        </div>
+        <div class="right box">
+          <div class="topic">Subscribe us</div>
+          <form action="#">
+            <input type="text" placeholder="Enter email address">
+            <input type="submit" name="" value="Send">
+            <div class="media-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="bottom">
+        <p style="padding: 0px 20px;">Copyright © 2023 <a href="#">Avishek Singh</a> All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    // Write all necessery JS here
+    let container=document.getElementById("cart-container")
+    let cardata=JSON.parse(localStorage.getItem("cart"));
+   
+    let lsdata=JSON.parse(localStorage.getItem("unknown"))||[]
+    let price1=document.getElementById("cart-total");
+    console.log(cardata)
+   console.log(cardata)
+    function shopdata(data){
+      container.innerHTML=null
+      data.forEach((element,index)=>{
+        let card=document.createElement("div");
+        card.setAttribute("id","mode")
+        let img=document.createElement("img");
+        img.setAttribute("src",element.image);
+ 
+
+       
+        let brand=document.createElement("h2");
+        brand.innerText=(element.title);
+       
+        let price=document.createElement("h3")
+        price.innerText="₹"+" "+element.price;
+       
+        
+        let increment=document.createElement("button")
+        increment.innerText="+";
+        let quantity=document.createElement("p")
+        quantity.innerText=element.quantity
+        let decrement=document.createElement("button")
+        decrement.innerText="-"
+        let d=document.createElement("div")
+        d.setAttribute("id","button")
+        increment.addEventListener("click",()=>{
+          
+          quantity.innerText++
+          element.quantity++;
+          cardata[index] = element;
+          localStorage.setItem("cart",JSON.stringify(cardata));
+          shopdata(cardata);
+
+        });
+        decrement.addEventListener("click",()=>{
+        if(element.quantity > 1){
+            quantity.innerText--
+            element.quantity--;
+            cardata[index] = element;
+            localStorage.setItem("cart",JSON.stringify(cardata));
+            shopdata(cardata)
+        }
+        })
+       
+        let remove=document.createElement("button");
+        d.append(decrement,quantity,increment)
+        remove.setAttribute("id","remove")
+        remove.innerText="Remove"
+       remove.addEventListener("click",()=>{
+        lsdata.push(element);
+        
+        localStorage.setItem("unknown",JSON.stringify(lsdata));
+        cardata.splice(index,1);
+
+        localStorage.setItem("cart",JSON.stringify(cardata));
+        document.getElementById("item").innerText=cardata.length;
+        if(cardata.length===0){
+    price1.innerText=0
+   }
+        shopdata(cardata)
+       })
+        
+     
+        let total=0;
+        cardata.forEach((element,index)=>{
+          
+          total+=parseInt((element.price))*element.quantity
+          price1.innerText= total;
+        })
+       let text=document.createElement("p")
+       text.innerText="Suits and Jackets Items"
+        let div1=document.createElement("div");
+        div1.setAttribute("id","data")
+        div1.append(brand,price,text,d,remove)
+
+
+       
+        card.append(img,div1);
+        container.append(card)
+
+
+      })
+    }
+    shopdata(cardata)
+
+  
+  
+    let to=document.getElementById("item")
+    to.innerText=cardata.length;
+    document.getElementById("buy").addEventListener("click",()=>{
+      // let order
+      localStorage.setItem("order",JSON.stringify( cardata))
+      window.location.pathname="address.html"
+
+      localStorage.removeItem("cart")
+    })
+    let coupon=document.getElementById("coupne");
+    let n=1
+    coupon.addEventListener("click",()=>{
+      
+      if(price1.innerText>=100000 ){
+        if(n==1){
+          price1.innerText=Number(Math.ceil(price1.innerText*0.90));
+        n=2
+        Swal.fire({
+            position: "centre",
+            icon: "success",
+            title: "Coupon Applied Successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }else{
+          // alert("Coupon used only once at a time")
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Coupon used only once at a time'
+          })
+        }
+       
+       
+      }else{
+        let x=100000-Number(price1.innerText);
+        // alert(`you have to shop more for get coupon that is ${x}`)
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: `you have to shop more for get coupon that is ${x}`
+          })
+          setTimeout(()=>{
+            window.location.href="furniture.html"
+          },3000)
+      }
+    })
+
+
+
+  </script>
+  
+  <script>
+    let searchBar = document.getElementById("searchBar");
+    let searchBtn = document.getElementById("searchBtn");
+
+    searchBtn.addEventListener("click",()=>{
+    if(searchBar.value == "mobile"){
+      window.location.href="mobile.html";
+    }
+    else if(searchBar.value == "furniture"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "Furniture"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "Furnitures"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "furnitures"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "sofa set"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "Sofa set"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "sofa sets"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "Sofa sets"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "Mobiles"){
+      window.location.href="mobile.html";
+    }
+    else if(searchBar.value == "mobiles"){
+      window.location.href="mobile.html";
+    }
+    else{
+      window.location.href="none.html";
+    }
+    })
+  </script>
+
+   <!-- Do not touch this code !!!!!!!!!! -->
+   <script>
+    let Display_name = document.getElementById("LName");
+    let userDname = JSON.parse(localStorage.getItem("zapp-name"));
+    Display_name.textContent = userDname;
+    let logo = document.getElementById("logo1");
+    logo.addEventListener("click", (e) => {
+      localStorage.setItem("zapp-name", JSON.stringify("LOGIN / REGISTER"));
+      Display_name.textContent = "LOGIN / REGISTER"
+    })
+  </script>
+<!-- Do not touch this code !!!!!!!!!! -->
+
+</html>
