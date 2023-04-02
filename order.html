@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>My Orders</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
+
+       #container{
+        margin-top: 50px;
+        overflow: auto;
+        background-color:#ece7e9 ;
+       }
+       #pic {
+        margin-top: 50px;
+        width: 50%;
+        height: 91%;
+        background-image: url("https://i.ibb.co/yFb8nNZ/3d-shopping-cart-with-cloud-online-shopping-digital-marketing-ideas-basket-promotional-labels-white.jpg");
+        background-size: cover;
+        /* background-p;
+         */
+         /* background-attachment: fixed; */
+        /* border: 2px solid red; */
+       }
+        #appen{
+            /* border: 2px solid green; */
+            display: flex;
+            width: 100%;
+            overflow: auto;
+            font-size: 15px;
+            line-height: 40px;
+            margin-bottom: 15px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            background-color: rgb(255, 235, 238);
+         border-radius: 10px
+            ;
+        }
+        #container img{
+            display: block;
+            width: 300px;
+            height: 80%;
+        }
+        #main{
+            display: flex;
+            width: 93%;
+            margin: auto;
+            /* border: 1px solid rebeccapurple; */
+            justify-content: space-between;
+            height: 80vh;
+            margin-top: 30px;
+        }
+        #main>div{
+            width: 50%;
+            /* border: 1px solid red; */
+        }
+        #info{
+            padding-left: 30px;
+            /* text-align: center; */
+        }
+        /* #pic{
+            position: sticky;
+        } */
+        p{
+            font-family: poppins;
+            font-size: 16px;
+
+
+        }
+        h4{
+            font-family: montserrat;
+            font-size: 20px;
+        }
+        h5{
+            font-family: montserrat; 
+            font-size: 18px;
+        }
+       #cancel{
+            color: #fff;
+            background-color: #333;
+            font-family: montserrat;
+            /* display: block; */
+            margin: auto;
+            width: 140px;
+            padding: 5px;
+            border-radius: 4px;
+            border: none;
+            transition: transform 0.3s;
+        }
+        #cancel:hover{
+            transform: scale(1.1);
+        }
+
+        .navbar {
+      margin-top: -25px;
+    }
+
+    </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+        <div class="logo" id="logo1"><a href="index.html">Zapparel</a></div>
+        <ul class="links">
+            <li><a href="furniture.html">SHIRTS</a></li>
+            <li><a href="index.html">PANTS</a></li>
+            <li><a href="index.html">SUITS & JACKETS</a></li>
+            <li><a href="index.html">SHOES</a></li>
+            <li><a href="index.html">SWEATERS</a></li>
+        </ul>
+        <a href="login.html" class="actionBtn" id="LName">LOGIN / REGISTER</a>
+        <a href="shopping-cart.html" class="actionBtn" id="LName">CART</a>
+        <div class="toggleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="dropdownMenu open">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="index.html">Resume</a></li>
+        <li><a href="index.html">Contact</a></li>
+        <a href="login.html" class="actionBtn">LOGIN / REGISTER</a>
+        <a href="shopping-cart.html" class="actionBtn">CART</a>
+    </div>
+</header>
+
+    <div id="main">
+        <div id="pic"></div>
+     <div id="container">
+        <!-- append data in tabular form -->
+     </div>
+
+    </div>
+    <footer>
+      <div class="content">
+        <div class="left box">
+          <div class="upper">
+            <div class="topic">About us</div>
+            <p>Read all about it! Explore style hints and tips from Tyrwhitt, discover more about our collections and products, and meet unique leaders through Nick Wheeler's interviews in A Tailored Life.</p>
+          </div>
+          <div class="lower">
+            <div class="topic">Contact us</div>
+            <div class="phone">
+              <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
+            </div>
+            <div class="email">
+              <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="middle box">
+          <div class="topic">Our Products</div>
+          <div><a href="#">Tailored Fitted Shirts</a></div>
+          <div><a href="#">Suits & Cotton Blazzers</a></div>
+          <div><a href="#">Personalised Shirts Design</a></div>
+          <div><a href="#">Theme Dresses, Design</a></div>
+          <div><a href="#">Mobile Cover Design</a></div>
+          <div><a href="#">Wired with Different Styles</a></div>
+        </div>
+        <div class="right box">
+          <div class="topic">Subscribe us</div>
+          <form action="#">
+            <input type="text" placeholder="Enter email address">
+            <input type="submit" name="" value="Send">
+            <div class="media-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="bottom">
+        <p style="padding: 0px 20px;">Copyright © 2023 <a href="#">Avishek Singh</a> All rights reserved</p>
+      </div>
+    </footer>
+</body>
+<script>
+   let cardata= JSON.parse( localStorage.getItem("order"));
+  console.log(cardata)
+   let container=document.getElementById("container");
+   function showdata(order){
+    container.innerHTML=null
+    cardata.forEach((item,index)=>{
+    let main=document.createElement("div");
+        main.setAttribute("id","appen");
+        let img=document.createElement("img");
+        img.setAttribute("src",item.image)
+        let title=document.createElement("h4");
+        title.innerText=item.title;
+        let price=document.createElement("h5");
+        price.innerText= "₹"+" "+item.price;
+        let desc=document.createElement("p")
+        desc.innerText=item.description
+        let open=document.createElement("p");
+        open.innerText="Arriving in 7 days"
+        let btn=document.createElement("button")
+        btn.setAttribute("id","cancel")
+        btn.addEventListener("click",()=>{
+            cardata.splice(index,1);
+
+localStorage.setItem("order",JSON.stringify(cardata));
+showdata()
+        })
+        btn.innerText="Cancel Order"
+        let div=document.createElement("div");
+        div.setAttribute("id","info")
+        div.append(title,price,open,btn);
+        main.append(img,div)
+        container.append(main)
+         
+})
+
+   }
+showdata()
+ 
+//     console.log(main)
+  
+       
+       
+
+//  console.log(card)
+  
+</script>
+<script>
+    let searchBar = document.getElementById("searchBar");
+    let searchBtn = document.getElementById("searchBtn");
+
+    searchBtn.addEventListener("click",()=>{
+    if(searchBar.value == "mobile"){
+      window.location.href="mobile.html";
+    }
+    else if(searchBar.value == "furniture"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "Furniture"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "Furnitures"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "furnitures"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "sofa set"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "Sofa set"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "sofa sets"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "Sofa sets"){
+      window.location.href="furniture.html";
+    }
+    else if(searchBar.value == "Mobiles"){
+      window.location.href="mobile.html";
+    }
+    else if(searchBar.value == "mobiles"){
+      window.location.href="mobile.html";
+    }
+    else{
+      window.location.href="none.html";
+    }
+    })
+  </script>
+  <!-- Do not touch this code !!!!!!!!!! -->
+  <script>
+    let Display_name = document.getElementById("LName");
+    let userDname = JSON.parse(localStorage.getItem("zapp-name"));
+    Display_name.textContent = userDname;
+    let logo = document.getElementById("logo1");
+    logo.addEventListener("click", (e) => {
+      localStorage.setItem("zapp-name", JSON.stringify("LOGIN / REGISTER"));
+      Display_name.textContent = "LOGIN / REGISTER"
+    })
+  </script>
+<!-- Do not touch this code !!!!!!!!!! -->
+</html>
